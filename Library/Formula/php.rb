@@ -16,7 +16,6 @@ class Php <Formula
 
   depends_on 'libxml2'
   depends_on 'jpeg'
-  depends_on 'libpng'
   depends_on 'mcrypt'
   depends_on 'gettext'
   if ARGV.include? '--with-mysql'
@@ -96,7 +95,7 @@ class Php <Formula
       "--enable-gd-native-ttf",
       "--with-mcrypt=#{Formula.factory('mcrypt').prefix}",
       "--with-jpeg-dir=#{Formula.factory('jpeg').prefix}",
-      "--with-png-dir=#{Formula.factory('libpng').prefix}",
+      "--with-png-dir=/usr/X11",
       "--with-gettext=#{Formula.factory('gettext').prefix}",
       "--with-tidy",
       "--mandir=#{man}"
